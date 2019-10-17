@@ -1,10 +1,14 @@
 import os
-import time
 import json
 import requests
 import urllib.request
 from appscript import app, mactypes
+
 URL = "https://api.nasa.gov/planetary/apod?api_key=<api_key>"
+if URL.lower().startswith('http'):
+	pass
+else:
+	raise ValueError from None
 
 try:
 	image_data = json.loads(requests.get(URL).text)
