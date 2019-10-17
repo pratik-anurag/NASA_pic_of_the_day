@@ -23,5 +23,5 @@ try:
 	else:
 		print('image already present,setting up existing image as desktop wallpaper')
 		app('Finder').desktop_picture.set(mactypes.File(file_path))
-except Exception as inst:: 
+except Exception as inst:
 	print('Exception occured: ',inst)
